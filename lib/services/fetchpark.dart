@@ -8,7 +8,9 @@ import '../key/key.dart';
 Future<List<Park>> fetchPark() async {
   List<Park> parkingList;
   String url =
-      "http://openapi.seoul.go.kr:8088/$apiKey/json/GetParkInfo/1/5/역삼";
+      "http://openapi.seoul.go.kr:8088/$apiKey/json/GetParkInfo/1/5/";
+      // "http://data.seoul.go.kr/dataList/OA-21709/S/1/datasetView.do";
+      // "http://data.seoul.go.kr/dataList/OA-13122/S/1/datasetView.do";
   final response = await http.get(Uri.parse(url));
   final responseBody = response.body;
 
